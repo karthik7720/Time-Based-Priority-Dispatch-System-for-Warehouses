@@ -51,16 +51,50 @@ Each zone contains **Blocks A, B, C** for organized product storage.
 
 ## 🛠️ Hardware Used
 
-| Component        | Description                 | Cost (INR) |
-|------------------|-----------------------------|------------|
-| ESP32 Dev Board  | Wi-Fi microcontroller        | ₹300       |
-| RFID RC522       | RFID Reader Module           | ₹150       |
-| RFID Tags        | Passive RFID Tags (10 qty)   | ₹200       |
-| RTC Module       | Real-Time Clock Module       | ₹100       |
-| Power Adapter    | 5V DC                        | ₹150       |
-| Misc Components  | Wires, PCB, breadboard       | ₹200       |
-| **Total**        |                             | **₹1,000** |
+### 🔌 Microcontroller & Communication
+- **Arduino Nano** – Main controller for the vehicle
+- **HC-05 Bluetooth Module** – Enables wireless control via mobile app
 
+### ⚙️ Control & Motion
+- **L298N Motor Driver Module** – Drives and controls the DC motors
+- **4-Wheel Vehicle Chassis** – Base platform for product transport
+- **4 × DC Gear Motors** – One attached to each wheel
+- **Breadboard & Jumper Wires** – For prototyping and circuit connections
+
+### 📦 Tracking & Automation
+- **RC522 RFID Reader Module** – Scans passive RFID tags at each zone
+- **Passive RFID Tags** – Attached to products for identification
+- **Real-Time Clock (RTC) Module** – Maintains accurate dispatch scheduling
+
+### 📶 Connectivity & Cloud Integration
+- **ESP32 Module** – Sends scanned product data to Firebase via Wi-Fi
+
+### ⚡ Power
+- 5V DC Power Supply (via 12v Adapter)
+
+---
+
+### 🔧 Prototype Setup
+
+![Untitled-1 copy](https://github.com/user-attachments/assets/05eaac32-c255-420d-8194-84df4c038259)
+
+
+
+---
+## 📱 Mobile App (MIT App Inventor)
+
+A simple Bluetooth control interface is developed using **MIT App Inventor**, allowing warehouse staff to manually navigate the vehicle between zones using standard movement commands:
+
+- `F` – Forward
+- `B` – Backward
+- `L` – Left
+- `R` – Right
+- `S` – Stop
+
+  ![App_Interface](https://github.com/user-attachments/assets/de169eed-b22f-460c-926f-6bfbb83e34c1)
+
+
+This simulates semi-automated material movement across the warehouse layout.
 ---
 
 ## 💻 Software Stack
